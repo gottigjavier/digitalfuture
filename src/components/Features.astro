@@ -1,0 +1,53 @@
+---
+// src/components/Features.astro
+const features = [
+  { title: "Redes Virtuales", 
+    description: "Parte de nuestras relaciones se dan en entornos virtuales. Entre ellas, las comerciales.",
+    src: "/pics/hombremujer-h.avif"
+  },
+  { title: "Procesos Digitales", 
+    description: "Cada vez más, transacciones y procesos internos de empresas requieren soluciones basadas en software.",
+    src: "/pics/joven-sentados-h.avif" 
+  },
+  { title: "Nuevo Mundo", 
+    description: "Un mundo siempre nuevo está a sólo un click de distancia.",
+    src: "/pics/mundo-mano-h.avif" 
+  }
+];
+
+const featureslength = features.length;
+---
+
+<section class="px-4 pb-6 pt-12">
+  <h2 class="principal text-5xl lg:text-8xl font-bold mb-4 lg:mb-8 text-center">Digital Future</h2>
+  <h2 class="text-2xl lg:text-4xl font-bold mb-4 lg:mb-8 text-center text-blue-500">Desarrollamos Software</h2>
+  <div class=`grid grid-cols-1 md:grid-cols-${featureslength} gap-8 max-w-5xl mx-auto`>
+    {features.map((feature) => (
+      <div class="p-6 rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
+        <img class="rounded my-2" src={feature.src} alt="imagen" />
+        <p class="text-center"><i>{feature.description}</i></p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .principal {
+    opacity: 0.8;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+  
+  img {
+    margin: 0;
+    transition: margin 0.5s;
+  }
+  img:hover {
+    margin: -2rem 0 1rem 0;
+    box-shadow: 0 12px 16px 0 rgba(18, 18, 182, 0.54), 0 17px 50px 0 rgba(14, 11, 119, 0.49);
+    transition: margin 0.5s;
+  }
+</style>

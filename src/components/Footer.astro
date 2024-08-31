@@ -1,0 +1,58 @@
+---
+// src/components/Footer.astro
+const footerSections = [
+  /* {
+    title: "Product",
+    links: ["Features", "Pricing", "Security"]
+  }, */
+  {
+    title: "Empresa",
+    stitle1: "Sobre Nosotros",
+    link1: "#",
+    stitle2: "Contacto",
+    link2: "#"
+  },
+  /* {
+    title: "Resources",
+    links: ["Blog", "Help Center", "API Docs"]
+  }, */
+  {
+    title: "Legal",
+    stitle1: "Privacidad y",
+    link1: "/legales",
+    stitle2: "Términos de Uso",
+    link2: "/legales"
+  }
+];
+---
+
+<footer class="bg-gray-900 px-4 py-8 bottom-0 w-screen justify-end">
+  <div class="max-w-6xl mx-auto grid grid-cols-3 gap-8 text-white text-opacity-85">
+    {footerSections.map((section) => (
+      <div>
+        <h3 class="font-semibold mb-4">{section.title}</h3>
+        <ul class="space-y-2">
+            <li><a href={section.link1} class="hover:text-gray-300">{section.stitle1}</a></li>
+            <li><a href={section.link2} class="hover:text-gray-300">{section.stitle2}</a></li>
+        </ul>
+      </div>
+    ))}
+    <img src="/logos/perfil-logo-l.png" alt="logo">
+  </div>
+  <div class="mt-8 text-center text-sm text-gray-500">
+    © 2024 Digital Future. Todos los Derechos Reservados.
+  </div>
+</footer>
+
+<style>
+  img {
+    width: 8rem;
+    justify-self: flex-end;
+  }
+
+  @media (max-width: 768px){
+      img {
+        width: 5rem;
+      }
+    }
+</style>
