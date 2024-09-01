@@ -2,7 +2,6 @@
 import { ViewTransitions } from "astro:transitions";
 import ThemeManager from "../components/ThemeManager.astro";
 import Header from "../components/Header.astro";
-import Headerr from "../components/Headerr.astro";
 
 // src/layouts/Layout.astro
 const { title } = Astro.props;
@@ -19,7 +18,7 @@ const { title } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="min-h-screen font-sans">
-    <Headerr />
+    <Header />
     <slot />
   </body>
   </html>
