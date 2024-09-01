@@ -59,7 +59,7 @@
     "packageJson": {
       "dependencies": [
         "npm:@astrojs/check@^0.9.3",
-        "npm:@astrojs/deno@^5.0.1",
+        "npm:@astrojs/deno@^5",
         "npm:@astrojs/tailwind@^5.1.0",
         "npm:astro@^4.15.1",
         "npm:tailwindcss@^3.4.10",
