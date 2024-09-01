@@ -14,7 +14,7 @@ const { defaultTheme = "auto" } = Astro.props;
     const store =
       typeof localStorage !== "undefined"
         ? localStorage
-        : { getItem: () => null, setItem: () => {} };
+        : { getItem: () => "dark", setItem: () => {} };
 
     const mediaMatcher = window.matchMedia("(prefers-color-scheme: light)");
     let systemTheme = mediaMatcher.matches ? "light" : "dark";
