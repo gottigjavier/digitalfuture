@@ -2,15 +2,15 @@
 // src/components/Features.astro
 const features = [
   { title: "Redes Virtuales", 
-    description: "Parte de nuestras relaciones se dan en entornos virtuales. Entre ellas, las comerciales.",
+    description: "Parte de las relaciones se dan en entornos virtuales. Entre ellas, las comerciales.",
     src: "/pics/hombremujer-h.avif"
   },
   { title: "Procesos Digitales", 
     description: "Cada vez más, transacciones y procesos internos de empresas requieren soluciones basadas en software.",
     src: "/pics/joven-sentados-h.avif" 
   },
-  { title: "Nuevo Mundo", 
-    description: "Un mundo siempre nuevo está a sólo un click de distancia.",
+  { title: "Mundo Dinámico", 
+    description: "Un mundo siempre cambiante está a sólo un click de distancia.",
     src: "/pics/mundo-mano-h.avif" 
   }
 ];
@@ -19,8 +19,8 @@ const featureslength = features.length;
 ---
 
 <section class="px-4 pb-6 pt-12">
-  <h2 class="principal text-5xl lg:text-8xl font-bold mb-4 lg:mb-8 text-center">Digital Future</h2>
-  <h2 class="text-2xl lg:text-4xl font-bold mb-4 lg:mb-8 text-center text-blue-500">Desarrollamos Software</h2>
+  <h2 class="principal text-4xl md:text-7xl font-bold mb-4 lg:mb-8 text-center">Digital Future</h2>
+  <h2 class="text-lg md:text-3xl font-bold mb-4 lg:mb-8 text-center text-blue-500">Desarrollamos Software</h2>
   <div class=`grid grid-cols-1 md:grid-cols-${featureslength} gap-8 max-w-5xl mx-auto`>
     {features.map((feature) => (
       <div class="p-6 rounded-lg">
@@ -33,8 +33,9 @@ const featureslength = features.length;
 </section>
 
 <style>
-  .principal {
+  .principal, h2 {
     opacity: 0.8;
+    font-family: 'ZenDots';
   }
 
   p {
