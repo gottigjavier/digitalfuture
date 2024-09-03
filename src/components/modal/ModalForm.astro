@@ -7,43 +7,17 @@
             <span class="close">&times;</span>
             <h2>Modal Header</h2>
         </div>
-        <div class="modal-body">
-            <form method="POST">
-                <label>
-                    Nombre:
-                    <p>
-                        <input type="text" name="name" required />
-                    </p>
-                </label>
-                <label>
-                    Correo electrónico:
-                    <p>
-                        <input type="email" name="email" required />
-                    </p>
-                </label>
-                <label>
-                    Teléfono:
-                    <p>
-                        <input type="tel" name="tel" minlength="7" />
-                    </p>
-                </label>
-                <label>
-                    Motivo de Contacto:
-                    <p>
-                        <textarea
-                            id="mytext"
-                            name="mytext"
-                            maxlength="500"
-                            wrap="soft"
-                            cols="20"
-                            rows="3"></textarea>
-                    </p>
-                </label>
-                <p>
-                    <button class="send">Enviar</button>
-                </p>
-            </form>
-        </div>
+        <div class="form-content">
+        <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSe1SZCssVDbkKmqAqTVd9jn3Dr9gioTqsx2CG2yQ__cAe1iww/viewform?embedded=true" 
+            width="640" 
+            height="980" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">
+        Cargando Formulario…
+        </iframe>
+    </div>
         <div class="modal-footer">
             <h3>Modal Footer</h3>
         </div>
@@ -183,7 +157,7 @@
     var modal = document.getElementById("myModal");
 
     // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+    var btn = document.getElementById("myBtn1");
     console.log('open btn: ', btn);
 
     // Get the <span> element that closes the modal

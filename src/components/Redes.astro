@@ -1,0 +1,35 @@
+---
+const redes = [
+{
+        rname: "mail",
+        rhref: "mailto:digitalfuture.ar@gmail.com?subject=Digital%20Future.%20Contacto",
+        ricon: "/icons/mail.png",
+        rqr: ""
+    },
+    {
+        rname: "Facebook",
+        rhref: "https://www.facebook.com/profile.php?id=61564466686723",
+        ricon: "/icons/facebook.png",
+        rqr: "/icons/facebook-qr.png"
+    },
+    {
+        rname: "instagram",
+        rhref: "https://www.instagram.com/digitalfuture.ar/",
+        ricon: "/icons/instagram.png",
+        rqr: "/icons/instagram-qr.png"
+    }
+]
+---
+
+<section>
+    <div class="flex flex-row justify-end">
+        {redes.map((red) => (
+            <div class="p-1">
+                <a href={red.rhref} target="_blank">
+                    <img class="pl-4 mx-0 mt-0 mb-1" src={red.ricon} alt="imagen" width="60" />
+                    <img class="mx-0 mt-0 mb-1" src={red.rqr} width="80" />
+                </a>
+            </div>
+          ))}
+    </div>
+</section>
