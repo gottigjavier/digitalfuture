@@ -1,1 +1,28 @@
-<img src="/logos/perfil-logo-l.png" alt="perfil logo">
+---
+---
+<!-- El problema es cuando cambia y no se hidrata. Ver ThemeToggleButton -->
+<div>
+    <img class="nimg rounded-lg px-1" src="/logos/perfil-logo-b.png" alt="perfil logo">
+</div>
+
+<style>
+    .nimg {
+        color: rgb(3, 199, 199) !important;
+    }
+</style>
+<script is:inline>
+    /* let logo= "";
+    console.log("this.dataset.currentTheme -> ", this.currentTheme);
+    const currentTheme = window.localStorage.getItem("theme");
+    if (currentTheme == "dark"){
+        logo = "/logos/perfil-logo-l.png";
+    }
+    if (currentTheme == "light"){
+        logo = "/logos/perfil-logo-d.png";
+    }
+    
+
+    const rimg= document.querySelector("img");
+    rimg.setAttribute("src", logo);
+    console.log("rimg:  ", this.theme.getTheme()); */
+</script>

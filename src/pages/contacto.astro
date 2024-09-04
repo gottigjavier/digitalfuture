@@ -6,8 +6,7 @@ import Layout from "../layouts/Layout.astro";
     <div class="form-content">
         <iframe 
         src="https://docs.google.com/forms/d/e/1FAIpQLSe1SZCssVDbkKmqAqTVd9jn3Dr9gioTqsx2CG2yQ__cAe1iww/viewform?embedded=true" 
-            width="640" 
-            height="980" 
+            
             frameborder="0" 
             marginheight="0" 
             marginwidth="0">
@@ -19,9 +18,8 @@ import Layout from "../layouts/Layout.astro";
 <style>
     /* form Content */
     .form-content {
-        margin:1vh 25vw 5vh 25vw; /* Location of the box */
+        margin:1vh 25vw 30vh 25vw; /* Location of the box */
         position: relative;
-        background-color: #363636;
         padding: 1rem 1rem;
         border: 2px solid #7a7a7a;
         border-radius: 1%;
@@ -32,6 +30,12 @@ import Layout from "../layouts/Layout.astro";
         -webkit-animation-duration: 0.4s;
         animation-name: animatetop;
         animation-duration: 0.4s;
+    }
+
+    iframe {
+        padding: 0 2rem 0 0;
+        width: 49vmax; 
+        height: 80vmax; 
     }
 
     /* Add Animation */
@@ -119,15 +123,25 @@ import Layout from "../layouts/Layout.astro";
         background-color: rgb(0, 211, 105);
     }
 
-    @media (max-width: 768px) and (orientation: portrait) {
+    @media screen and (max-width: 768px) and (orientation: portrait) {
         .form-content {
-            margin:1vh 2vw 5vh 2vw;
+            margin:1rem 0 0 0;
         }
+        iframe {
+        padding: 0 0 0 0;
+        width: 95vw; 
+        height: 80vmax; 
+    }
     }
 
-    @media (max-width: 768px) and (orientation: landscape) {
+    @media screen and (max-width: 768px) and (orientation: landscape) {
         .form-content {
-            margin:1vh 2vw 5vh 2vw;
+            margin:1rem 0 0 0;
         }
+        iframe {
+        padding: 0 0 0 0;
+        width: 95vw; 
+        height: 80vmax; 
+    }
     }
 </style>

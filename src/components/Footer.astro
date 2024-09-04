@@ -1,6 +1,7 @@
 ---
 import Redes from "./Redes.astro";
 
+
 // src/components/Footer.astro
 const footerSections = [
   /* {
@@ -28,8 +29,8 @@ const footerSections = [
 ];
 ---
 
-<footer class="bg-gray-900 px-2 py-4 bottom-0 w-screen justify-end">
-  <div class="max-w-6xl mx-auto grid grid-cols-4 gap-6 text-white text-opacity-85">
+<footer class="bg-gray-900 px-1 py-3 bottom-0 w-screen justify-end">
+  <div class="max-w-6xl mx-auto grid grid-cols-3 gap-2 text-white text-opacity-85">
     {footerSections.map((section) => (
       <div>
         <h3 class="font-semibold mb-2">{section.title}</h3>
@@ -39,8 +40,8 @@ const footerSections = [
         </ul>
       </div>
     ))}
-    <img src="/logos/perfil-logo-l.png" alt="logo">
     <Redes />
+    <!-- <img src="/logos/perfil-logo-l.png" alt="logo"> -->
   </div>
   <div class="mt-8 text-center text-sm text-gray-500">
     © 2024 Digital Future. Todos los Derechos Reservados.

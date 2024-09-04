@@ -4,7 +4,7 @@ const redes = [
         rname: "mail",
         rhref: "mailto:digitalfuture.ar@gmail.com?subject=Digital%20Future.%20Contacto",
         ricon: "/icons/mail.png",
-        rqr: ""
+        rqr: "/icons/mail-qr.png"
     },
     {
         rname: "Facebook",
@@ -22,14 +22,42 @@ const redes = [
 ---
 
 <section>
-    <div class="flex flex-row justify-end">
+    <div class="redes flex flex-row">
         {redes.map((red) => (
-            <div class="p-1">
+            <div class="p-1 flex">
                 <a href={red.rhref} target="_blank">
-                    <img class="pl-4 mx-0 mt-0 mb-1" src={red.ricon} alt="imagen" width="60" />
-                    <img class="mx-0 mt-0 mb-1" src={red.rqr} width="80" />
+                    <img class="rqr mx-0 mt-0 mb-1" src={red.rqr} />
+                    <img class="ricon" src={red.ricon} alt="imagen" />
                 </a>
             </div>
           ))}
     </div>
 </section>
+
+<style>
+    .redes {
+        justify-content: flex-end;
+
+    }
+    .ricon {
+        float: right;
+        padding-top: 5px;
+        width: 40px;
+    }
+    .rqr {
+        width: 150px;
+        aspect-ratio: 1/1;
+        
+    }
+
+    @media screen and (max-width: 850px) {
+        .ricon {
+            float: right;
+            padding-top: 3px;
+            width: 25px;
+        }
+        .rqr {
+            width: 200px;
+        }   
+    }
+</style>
