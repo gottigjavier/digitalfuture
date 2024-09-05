@@ -33,10 +33,10 @@ const footerSections = [
   <div class="max-w-6xl mx-auto grid grid-cols-3 gap-2 text-white text-opacity-85">
     {footerSections.map((section) => (
       <div>
-        <h3 class="font-semibold mb-2">{section.title}</h3>
+        <h3 class="ftitle font-semibold mb-2">{section.title}</h3>
         <ul class="space-y-1">
-            <li><a href={section.link1} class="hover:text-gray-300">{section.stitle1}</a></li>
-            <li><a href={section.link2} class="hover:text-gray-300">{section.stitle2}</a></li>
+            <li><a href={section.link1} class="ftext hover:text-gray-300">{section.stitle1}</a></li>
+            <li><a href={section.link2} class="ftext hover:text-gray-300">{section.stitle2}</a></li>
         </ul>
       </div>
     ))}
@@ -49,12 +49,18 @@ const footerSections = [
 </footer>
 
 <style>
+  .ftitle .ftext {
+    font-size: 1rem;
+  }
   img {
     width: 8rem;
     justify-self: center;
   }
 
   @media (max-width: 768px){
+    .ftitle, .ftext {
+      font-size: 0.8rem;
+    }
       img {
         width: 5rem;
       }
