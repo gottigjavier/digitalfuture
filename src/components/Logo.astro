@@ -19,10 +19,14 @@
     }
     if (currentTheme == "light"){
         logo = "/logos/perfil-logo-d.png";
-    }
+    } */
     
 
-    const rimg= document.querySelector("img");
-    rimg.setAttribute("src", logo);
-    console.log("rimg:  ", this.theme.getTheme()); */
+        const rimg= document.querySelector("html");
+        var xtheme = rimg.getAttribute("style")
+        console.log("xtheme -> ", xtheme.split(':')[1] )
+        rimg.addEventListener('change', (e)=>{
+            console.log("changeeeeeeeeeeeee")
+        })
+
 </script>
