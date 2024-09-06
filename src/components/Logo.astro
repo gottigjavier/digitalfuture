@@ -1,32 +1,48 @@
----
----
-<!-- El problema es cuando cambia y no se hidrata. Ver ThemeToggleButton -->
+<!-- Logo. Carga ambas imágenes (light y dark) y muestra una según el theme.
+    Se usa class block o hidden que son de taiwind y correponden a blok y none de css.
+    Primero se toma el valor de theme del localStorage.
+    Se identifican las id de las imágenes con document.getElementById, se las asigna a una variable
+    (dimg y limg) y se les setea la class con hidden o block dependiendo del theme.
+    
+    Luego se secucha si el theme cambia con document.addEventListener("theme-changed"...
+    Si solo se pasa de dark a light o viseversa las variables dimg y limg sirven para manipular la visibilidad
+    de las imágenes, pero si se navega a otra página ambas imágenes aparecen como hidden.
+    Para solucionar esto, como cuando se navega también se dispara el "theme-changed", se toma el evento
+    y se vuelve a identificar las imágenes por id, pero esta vez desde e.target.getElementById(...)
+    para setearles la class
+  -->
 <div>
-    <img class="nimg rounded-lg px-1" src="/logos/perfil-logo-b.png" alt="perfil logo">
+    <img id="dimg" class="hidden rounded-lg px-1" src="/logos/perfil-logo-d.png" alt="perfil logo">
+    <img id="limg" class="hidden rounded-lg px-1" src="/logos/perfil-logo-l.png" alt="perfil logo">
 </div>
 
-<style>
-    .nimg {
-        color: rgb(3, 199, 199) !important;
-    }
-</style>
+
 <script is:inline>
-    /* let logo= "";
-    console.log("this.dataset.currentTheme -> ", this.currentTheme);
-    const currentTheme = window.localStorage.getItem("theme");
-    if (currentTheme == "dark"){
-        logo = "/logos/perfil-logo-l.png";
-    }
-    if (currentTheme == "light"){
-        logo = "/logos/perfil-logo-d.png";
-    } */
-    
+  var xtheme= window.localStorage.getItem('theme');
+  const dimg = document.getElementById('dimg');
+  const limg = document.getElementById('limg');
+  console.log("start theme -> ", xtheme);
+  if (xtheme == 'dark'){
+          limg?.setAttribute('class', 'block rounded-lg px-1');
+          dimg?.setAttribute('class', 'hidden rounded-lg px-1');
+        } 
+        if (xtheme == 'light'){
+            dimg?.setAttribute('class', 'block rounded-lg px-1');
+            limg?.setAttribute('class', 'hidden rounded-lg px-1');
+        }
 
-        const rimg= document.querySelector("html");
-        var xtheme = rimg.getAttribute("style")
-        console.log("xtheme -> ", xtheme.split(':')[1] )
-        rimg.addEventListener('change', (e)=>{
-            console.log("changeeeeeeeeeeeee")
-        })
-
+  document.addEventListener("theme-changed", (e) =>{
+      xtheme= e.detail['theme'];
+      const ddimg= e.target.getElementById('dimg');
+      const llimg= e.target.getElementById('limg');
+      if (xtheme == 'dark'){
+          llimg?.setAttribute('class', 'block rounded-lg px-1');
+          ddimg?.setAttribute('class', 'hidden rounded-lg px-1');
+        } 
+        if (xtheme == 'light'){
+            ddimg?.setAttribute('class', 'block rounded-lg px-1');
+            llimg?.setAttribute('class', 'hidden rounded-lg px-1');
+        } 
+    });
+        
 </script>
