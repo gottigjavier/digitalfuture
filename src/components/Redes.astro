@@ -4,19 +4,22 @@ const redes = [
         rname: "mail",
         rhref: "mailto:digitalfuture.ar@gmail.com?subject=Digital%20Future.%20Contacto",
         ricon: "/icons/mail.png",
-        rqr: "/icons/mail-qr.png"
+        rqr: "/icons/mail-qr.png",
+        rtitle: "digitalfuture.ar@gmail.com"
     },
     {
         rname: "Facebook",
         rhref: "https://www.facebook.com/profile.php?id=61564466686723",
         ricon: "/icons/facebook.png",
-        rqr: "/icons/facebook-qr.png"
+        rqr: "/icons/facebook-qr.png",
+        rtitle: "Perfil Facebook"
     },
     {
         rname: "instagram",
         rhref: "https://www.instagram.com/digitalfuture.ar/",
         ricon: "/icons/instagram.png",
-        rqr: "/icons/instagram-qr.png"
+        rqr: "/icons/instagram-qr.png",
+        rtitle: "Perfil Instagram"
     }
 ]
 ---
@@ -24,7 +27,7 @@ const redes = [
 <section>
     <div class="redes flex flex-row">
         {redes.map((red) => (
-            <div class="p-1 flex">
+            <div class="p-1 flex" title={red.rtitle}>
                 <a href={red.rhref} target="_blank">
                     <img class="rqr mx-0 mt-0 mb-1" src={red.rqr} />
                     <img class="ricon" src={red.ricon} alt="imagen" />
