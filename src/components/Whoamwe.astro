@@ -1,0 +1,135 @@
+---
+const weare= [
+    {
+        icon:"/icons/innovation.png",
+        title:"",
+        text: "Optar por Digital Future significa confiar en un equipo que entiende tus desafíos y trabaja contigo para superarlos. Con un enfoque centrado en la calidad y la eficiencia, transformamos tus ideas en soluciones digitales efectivas que impulsan tu competitividad y rendimiento en el mercado.",
+    },
+    {
+        icon:"/icons/computer.png",
+        title:"",
+        text: "En Digital Future, no solo entregamos software, sino que ofrecemos un socio tecnológico comprometido con tu crecimiento. Aprovecha nuestra experiencia en el desarrollo de soluciones robustas y escalables que te mantendrán a la vanguardia del mercado y te ayudarán a alcanzar tus objetivos empresariales.",
+        where: "https://icons8.com/icon/j73wEfY74Z0f/teamwork",
+    },
+    {
+        icon:"/icons/networking.png",
+        title:"",
+        text: "Elige Digital Future para tu desarrollo de software y experimenta la combinación perfecta de innovación y personalización. Nuestro equipo de expertos crea soluciones a medida que se adaptan a tus necesidades específicas, garantizando un impacto real en el rendimiento y éxito de tu negocio.",
+        where: "https://www.flaticon.com/free-icons/technology"
+    }
+];
+
+const wearelen = weare.length;
+---
+
+<section class="px-4 pb-4 pt-6">
+    <div class=`grid grid-cols-1`>
+        <div class="container1 rounded-lg">
+            <img class="imgr rounded my-2" src="/pics/codigo.png" alt="imagen" />
+            <span>
+                <i>
+                    Optar por <span class="mainbr">Digital Future</span> 
+                    significa confiar en un equipo que entiende sus 
+                    desafíos y trabaja a su lado para superarlos. Con un enfoque centrado en la 
+                    calidad y la eficiencia, transformamos sus ideas en soluciones digitales 
+                    efectivas que impulsan su competitividad y rendimiento en el mercado.
+                </i>
+            </span>
+        </div>
+        <div class="container2 rounded-lg">
+            <img class="imgl rounded my-2" src="/pics/ayuda.png" alt="imagen" />
+            <span>
+                <i>
+                    En <span class="mainbr">Digital Future</span> 
+                    no solo ofrecemos software, somos un socio 
+                    tecnológico comprometido con su crecimiento. Aproveche nuestra experiencia 
+                    en el desarrollo de soluciones robustas y escalables que lo mantendrán a la 
+                    vanguardia del mercado y le ayudarán a alcanzar sus objetivos empresariales.
+                </i>
+            </span>
+        </div>
+        <div class="container3 rounded-lg">
+            <img class="imgr rounded my-2" src="/pics/exito.png" alt="imagen" />
+            <span>
+                <i>
+                    Eliga <span class="mainbr">Digital Future</span> 
+                    para su desarrollo de software y experimente la combinación 
+                    perfecta de innovación y personalización. Nuestro equipo de expertos crea soluciones 
+                    a medida que se adaptan a sus necesidades específicas, garantizando un impacto real 
+                    en el rendimiento y éxito de su negocio.
+                </i>
+            </span>
+            </div>
+    </div>
+  </section>
+
+  <style>
+
+    .container1 {
+        width: 75vw;
+        margin: 2rem 10vw 10rem 10vw;
+    }
+
+    .container2 {
+        width: 75vw;
+        margin: 0 10vw 10rem 10vw;
+    }
+
+    .container3 {
+        width: 75vw;
+        margin: 0 10vw 5rem 10vw;
+    }
+
+
+    img {
+        width:35vw;
+        transition: width 0.5s;
+    }
+
+    img:hover {
+        width: 58vw;
+        opacity: 0.8;
+        transition: width 0.5s;
+    }
+
+    .imgl {
+        float:left;
+        margin:0 1rem 0 0;
+    }
+
+    .imgr {
+        float:right;
+        margin:0 0 0 1rem;
+    }
+
+    span {
+        font-size: 1.2rem;
+        text-wrap: balance;
+    }
+
+    .mainbr {
+        font-size: 1rem;
+        font-family: 'ZenDots';
+        color: #2986e5;
+    }
+
+    @media screen and (max-width: 850px) {
+     
+        .container1 {
+            width: 90vw;
+            margin: 2rem 1vw 5rem 1vw;
+        }
+        
+        .container2 {
+            width: 90vw;
+            margin: 0 1vw 5rem 1vw;
+        }
+        
+        .container3 {
+            width: 90vw;
+            margin: 0 1vw 5rem 1vw;
+        }
+        
+    }
+
+  </style>
